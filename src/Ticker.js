@@ -3,9 +3,6 @@
  * It allows you to add callbacks that will be called on every frame of the loop,
  * passing them some useful information such as the current fps,
  * the time elapsed since the loop started, and the time elapsed since the last frame.
- * 
- * @constructor
- * @param {boolean} autoStart whether the loop should automatically start when the Ticker is created.
  */
 export default class Ticker {
   constructor({ autoStart = true } = {}) {
