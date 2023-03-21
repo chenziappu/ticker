@@ -1,0 +1,14 @@
+{
+  "name": "ticker",
+  "version": "1.0.0",
+  "type": "module",
+  "author": "Tsukasa Aoki",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^4.2.0"
+  }
+}
