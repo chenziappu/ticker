@@ -8,6 +8,7 @@ export default class Ticker {
   constructor({ autoStart = true } = {}) {
     this.id = 0;
     this.fps = 60;
+    this.targetFps = 60;
     this.deltaTime = 0;
     this.elapsedTime = 0;
     this.lastTime = 0;
@@ -50,7 +51,7 @@ export default class Ticker {
       this.fps = Math.round(1 / this.deltaTime);
     }
 
-    this.ratio = Math.round(60 * this.deltaTime);
+    this.ratio = Math.round(this.targetFps * this.deltaTime);
 
     this.elapsedTime += this.deltaTime;
 
