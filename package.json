@@ -1,8 +1,7 @@
 {
   "name": "@chenziappu/ticker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple animation loop",
-  "type": "module",
   "author": "Tsukasa Aoki",
   "files": ["dist"],
   "main": "./dist/ticker.umd.cjs",
