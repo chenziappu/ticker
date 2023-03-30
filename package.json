@@ -1,9 +1,11 @@
 {
   "name": "@chenziappu/ticker",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple animation loop",
   "author": "Tsukasa Aoki",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "main": "./dist/ticker.umd.cjs",
   "module": "./dist/ticker.js",
   "exports": {
@@ -24,9 +26,11 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:types": "tsc --allowJs -d --emitDeclarationOnly --declarationDir ./dist --removeComments ./src/Ticker.js",
     "preview": "vite preview"
   },
   "devDependencies": {
+    "typescript": "^5.0.2",
     "vite": "^4.2.0"
   }
 }
