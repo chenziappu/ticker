@@ -51,7 +51,7 @@ export default class Ticker {
       this.fps = Math.round(1 / this.deltaTime);
     }
 
-    this.ratio = Math.round(this.targetFps * this.deltaTime);
+    this.ratio = Math.min(this.targetFps * this.deltaTime, 1);
 
     this.elapsedTime += this.deltaTime;
 
