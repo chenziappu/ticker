@@ -1,6 +1,6 @@
 # @chenziappu/ticker
 
-Ticker is a class that implements a simple animation loop.
+A simple animation loop.
 
 <br>
 
@@ -33,7 +33,7 @@ ticker.add(raf);
 
 |Option   |Type   |Default|Description|
 |---------|-------|-------|-----------|
-|`autoStart`|Boolean|true   |If true, requestAnimationFrame will be called automatically|
+|`autoStart`|Boolean|true   |If true, the start method will be called automatically.|
 
 <br>
 
@@ -41,9 +41,18 @@ ticker.add(raf);
 
 |Method|Description|Arguments|
 |------|-----------|---------|
-|`start()`|Start ticker.||
-|`stop()`|Stop ticker.||
-|`add(callback, priority)`|Adds a callback. Returns ID. Callback will be called on every frame.|`callback`: Callback to execute every frame.<br>`priority`: A higher number will be excuted before those with before lower number. Default is 0.|
+|`start()`|Start the animation loop.||
+|`stop()`|Stop the animation loop.||
+|`add(callback, priority)`|Adds a callback that will be called on every frame and returns its ID.|`callback`: Callback to execute every frame.<br>`priority`: A higher number will be excuted before those with before lower number. Default is 0.|
 |`remove(id)`|Remove a callback by its ID.|`id`: A return value of add() method|
 
 <br>
+
+## Callback arguments
+
+|Argument|Description|
+|-----|-----------|
+|`fps`|Current FPS.|
+|`deltaTime`|Elapsed time since the last frame.|
+|`ratio`|The ratio between the expected FPS (60 FPS) and the actual FPS. This value is usuful when FPS is above 60. If FPS is 60, `ratio` will be 1. If FPS is 120, `ratio` will be 0.5.|
+|`elapsedTime`|Elapsed time since the start method was called.|
