@@ -27,7 +27,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build:types": "vite build && tsc --allowJs -d --emitDeclarationOnly --declarationDir ./dist --removeComments ./src/Ticker.js",
+    "build:types": "vite build && tsc",
     "preview": "vite preview"
   },
   "devDependencies": {
