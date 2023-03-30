@@ -33,7 +33,7 @@ ticker.add(raf);
 
 |Option   |Type   |Default|Description|
 |---------|-------|-------|-----------|
-|`autoStart`|Boolean|true   |If true, the start method will be called automatically.|
+|`autoStart`|Boolean|true|If true, start() method will be called automatically.|
 
 <br>
 
