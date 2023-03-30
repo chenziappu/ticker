@@ -7,10 +7,10 @@
     "dist"
   ],
   "main": "./dist/ticker.umd.cjs",
-  "module": "./dist/ticker.js",
+  "module": "./dist/ticker.mjs",
   "exports": {
     ".": {
-      "import": "./dist/ticker.js",
+      "import": "./dist/ticker.mjs",
       "require": "./dist/ticker.umd.cjs"
     }
   },
