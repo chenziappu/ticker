@@ -1,8 +1,23 @@
 {
-  "name": "ticker",
+  "name": "@chenziappu/ticker",
   "version": "1.0.0",
+  "description": "A simple animation loop",
   "type": "module",
   "author": "Tsukasa Aoki",
+  "files": ["dist"],
+  "main": "./dist/ticker.umd.cjs",
+  "module": "./dist/ticker.js",
+  "exports": {
+    ".": {
+      "import": "./dist/ticker.js",
+      "require": "./dist/ticker.umd.cjs"
+    }
+  },
+  "keywords": [
+    "ticker",
+    "fps",
+    "requestAnimationFrame"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
