@@ -27,13 +27,13 @@ ticker.add(raf);
 
 |Option   |Type   |Default|Description|
 |---------|-------|-------|-----------|
-|autoStart|boolean|true   |if true, requestAnimationFrame will be called automatically|
+|`autoStart`|Boolean|true   |If true, requestAnimationFrame will be called automatically|
 
-## methods
+## Methods
 
 |Method|Description|Arguments|
 |------|-----------|---------|
-|start()|Start ticker||
-|stop()|Stop ticker||
-|add()|Adds a callback. Callback will be called on every frame. and return ID.|callback: Callback to execute every frame.<br>priority: A higher number will be excuted before those with before lower number. Default is 0.|
-|remove()|Remove a callback by its ID.|id: a return value of add() method|
+|`start()`|Start ticker.||
+|`stop()`|Stop ticker.||
+|`add(callback, priority)`|Adds a callback. Callback will be called on every frame. and return ID.|`callback`: Callback to execute every frame.<br>`priority`: A higher number will be excuted before those with before lower number. Default is 0.|
+|`remove(id)`|Remove a callback by its ID.|`id`: a return value of add() method|
