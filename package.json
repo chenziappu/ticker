@@ -8,6 +8,7 @@
   ],
   "main": "./dist/ticker.umd.cjs",
   "module": "./dist/ticker.mjs",
+  "types": "./dist/Ticker.d.ts",
   "exports": {
     ".": {
       "import": "./dist/ticker.mjs",
