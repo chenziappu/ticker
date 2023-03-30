@@ -25,6 +25,12 @@ export default class Ticker {
     cancelAnimationFrame(this.requestId);
   }
 
+  /**
+   * 
+   * @param {function} callback 
+   * @param {number} priority 
+   * @returns {number}
+   */
   add(callback, priority = 0) {
     const id = this.id;
 
@@ -36,12 +42,20 @@ export default class Ticker {
     return id;
   }
 
+  /**
+   * 
+   * @param {number} id 
+   */
   remove(id) {
     this.callbacks = this.callbacks.filter(callback => {
       return callback.id !== id;
     });
   }
 
+  /**
+   * 
+   * @param {number} timestamp 
+   */
   tick(timestamp) {
     if (this.lastTime === 0) this.lastTime = timestamp;
 
