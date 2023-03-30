@@ -10,7 +10,7 @@ A simple animation loop.
 npm i @chenziappu/ticker
 ```
 ```js
-import Ticker from '@chenziaapu/ticker'
+import Ticker from '@chenziappu/ticker'
 ```
 
 <br>
@@ -43,8 +43,8 @@ ticker.add(raf);
 |------|-----------|---------|
 |`start()`|Start the animation loop.||
 |`stop()`|Stop the animation loop.||
-|`add(callback, priority)`|Adds a callback that will be called on every frame and returns its ID.|`callback`: Callback to execute every frame.<br>`priority`: A higher number will be excuted before those with before lower number. Default is 0.|
-|`remove(id)`|Remove a callback by its ID.|`id`: A return value of add() method|
+|`add(callback, priority)`|Adds a callback that will be called on every frame and returns its ID.|`callback`: Callback to execute every frame.<br>`priority`: A higher number will be executed before those with lower number. Default is 0.|
+|`remove(id)`|Remove a callback by its ID.|`id`: A callback ID.|
 
 <br>
 
