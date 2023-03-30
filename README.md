@@ -21,7 +21,7 @@ import Ticker from '@chenziaapu/ticker'
 const ticker = new Ticker();
 
 function raf({ fps, deltaTime, ratio, elapsedTime }) {
-  // be called on every frame
+  // will be called on every frame
 }
 
 ticker.add(raf);
