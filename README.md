@@ -56,3 +56,9 @@ ticker.add(raf);
 |`deltaTime`|Elapsed time since the last frame.|
 |`ratio`|The ratio between the expected FPS (60 FPS) and the actual FPS. This value is usuful when FPS is above 60. If FPS is 60, `ratio` will be 1. If FPS is 120, `ratio` will be 0.5.|
 |`elapsedTime`|Elapsed time since the start method was called.|
+
+<br>
+
+## License
+
+[ISC License](http://opensource.org/licenses/ISC)

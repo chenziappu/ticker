@@ -25,6 +25,7 @@
     "type": "git",
     "url": "https://github.com/chenziappu/ticker.git"
   },
+  "license": "ISC",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
