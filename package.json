@@ -1,6 +1,6 @@
 {
   "name": "@chenziappu/ticker",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A simple animation loop",
   "author": "Tsukasa Aoki",
   "files": [
