@@ -44,6 +44,6 @@ ticker.add(raf);
 |`start()`|Start ticker.||
 |`stop()`|Stop ticker.||
 |`add(callback, priority)`|Adds a callback. Returns ID. Callback will be called on every frame.|`callback`: Callback to execute every frame.<br>`priority`: A higher number will be excuted before those with before lower number. Default is 0.|
-|`remove(id)`|Remove a callback by its ID.|`id`: a return value of add() method|
+|`remove(id)`|Remove a callback by its ID.|`id`: A return value of add() method|
 
 <br>
