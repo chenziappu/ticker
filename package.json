@@ -18,6 +18,10 @@
     "fps",
     "requestAnimationFrame"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chenziappu/ticker.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
