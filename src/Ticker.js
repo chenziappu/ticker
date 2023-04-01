@@ -5,24 +5,34 @@
  * the time elapsed since the loop started, and the time elapsed since the last frame.
  */
 export default class Ticker {
+  #id;
+  #fps;
+  #targetFps;
+  #deltaTime;
+  #elapsedTime;
+  #lastTime;
+  #ratio;
+  #callbacks;
+  #requestId;
+
   constructor({ autoStart = true } = {}) {
-    this._id = 0;
-    this._fps = 60;
-    this._targetFps = 60;
-    this._deltaTime = 0;
-    this._elapsedTime = 0;
-    this._lastTime = 0;
-    this._ratio = 1;
-    this._callbacks = [];
+    this.#id = 0;
+    this.#fps = 60;
+    this.#targetFps = 60;
+    this.#deltaTime = 0;
+    this.#elapsedTime = 0;
+    this.#lastTime = 0;
+    this.#ratio = 1;
+    this.#callbacks = [];
     if (autoStart) this.start();
   }
   
   start() {
-    this._requestId = requestAnimationFrame(this._tick.bind(this));
+    this.#requestId = requestAnimationFrame(this.#tick.bind(this));
   }
 
   stop() {
-    cancelAnimationFrame(this._requestId);
+    cancelAnimationFrame(this.#requestId);
   }
 
   /**
@@ -32,12 +42,12 @@ export default class Ticker {
    * @returns {number}
    */
   add(callback, priority = 0) {
-    const id = this._id;
+    const id = this.#id;
 
-    this._callbacks.push({ id, callback, priority });
-    this._callbacks.sort((a, b) => b.priority - a.priority);
+    this.#callbacks.push({ id, callback, priority });
+    this.#callbacks.sort((a, b) => b.priority - a.priority);
 
-    this._id += 1;
+    this.#id += 1;
 
     return id;
   }
@@ -47,7 +57,7 @@ export default class Ticker {
    * @param {number} id 
    */
   remove(id) {
-    this._callbacks = this._callbacks.filter(callback => {
+    this.#callbacks = this.#callbacks.filter(callback => {
       return callback.id !== id;
     });
   }
@@ -56,32 +66,32 @@ export default class Ticker {
    * 
    * @param {number} timestamp 
    */
-  _tick(timestamp) {
-    if (this._lastTime === 0) this._lastTime = timestamp;
+  #tick(timestamp) {
+    if (this.#lastTime === 0) this.#lastTime = timestamp;
 
-    this._deltaTime = (timestamp - this._lastTime) * 0.001;
+    this.#deltaTime = (timestamp - this.#lastTime) * 0.001;
 
-    if (this._deltaTime !== 0) {
-      this._fps = Math.round(1 / this._deltaTime);
+    if (this.#deltaTime !== 0) {
+      this.#fps = Math.round(1 / this.#deltaTime);
     }
 
-    this._ratio = Math.min(this._targetFps * this._deltaTime, 1);
+    this.#ratio = Math.min(this.#targetFps * this.#deltaTime, 1);
 
-    this._elapsedTime += this._deltaTime;
+    this.#elapsedTime += this.#deltaTime;
 
-    this._lastTime = timestamp;
+    this.#lastTime = timestamp;
 
-    if (this._callbacks.length) {
-      for (let i = 0; i < this._callbacks.length; i++) {
-        this._callbacks[i].callback({
-          fps: this._fps,
-          deltaTime: this._deltaTime,
-          ratio: this._ratio,
-          elapsedTime: this._elapsedTime
+    if (this.#callbacks.length) {
+      for (let i = 0; i < this.#callbacks.length; i++) {
+        this.#callbacks[i].callback({
+          fps: this.#fps,
+          deltaTime: this.#deltaTime,
+          ratio: this.#ratio,
+          elapsedTime: this.#elapsedTime
         });
       }
     }
 
-    requestAnimationFrame(this._tick.bind(this));
+    requestAnimationFrame(this.#tick.bind(this));
   }
 }
