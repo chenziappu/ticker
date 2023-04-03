@@ -2,7 +2,10 @@
   "name": "@chenziappu/ticker",
   "version": "1.0.9",
   "description": "A simple animation loop",
-  "author": "Tsukasa Aoki",
+  "author": {
+    "name": "Tsukasa Aoki",
+    "url": "https://twitter.com/chenziappu"
+  },
   "files": [
     "dist"
   ],
