@@ -82,14 +82,14 @@ export default class Ticker {
     this.#lastTime = timestamp;
 
     if (this.#callbacks.length) {
-      for (let i = 0; i < this.#callbacks.length; i++) {
-        this.#callbacks[i].callback({
+      this.#callbacks.forEach(callback => {
+        callback.callback({
           fps: this.#fps,
           deltaTime: this.#deltaTime,
           ratio: this.#ratio,
           elapsedTime: this.#elapsedTime
         });
-      }
+      });
     }
 
     requestAnimationFrame(this.#tick.bind(this));
