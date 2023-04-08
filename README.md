@@ -52,10 +52,10 @@ ticker.add(raf);
 
 |Argument|Description|
 |-----|-----------|
-|`fps`|Current FPS.|
-|`deltaTime`|Elapsed time since the last frame.|
+|`fps`|the current FPS.|
+|`deltaTime`|the elapsed time since the last frame.|
 |`ratio`|The ratio between the expected FPS (60 FPS) and the actual FPS. This value is usuful when FPS is above 60. If FPS is 60, `ratio` will be 1. If FPS is 120, `ratio` will be 0.5.|
-|`elapsedTime`|Elapsed time since start() method was called.|
+|`elapsedTime`|the elapsed time since start() method was called.|
 
 <br>
 
