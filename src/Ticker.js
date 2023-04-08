@@ -1,9 +1,3 @@
-/**
- * Ticker is a class that implements a simple animation loop.
- * It allows you to add callbacks that will be called on every frame of the loop,
- * passing them some useful information such as the current fps,
- * the time elapsed since the loop started, and the time elapsed since the last frame.
- */
 export default class Ticker {
   #id;
   #fps;
