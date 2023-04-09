@@ -1,6 +1,6 @@
 # @chenziappu/ticker
 
-A simple animation loop.
+Tickeris a simple animation loop.
 
 <br>
 
@@ -11,6 +11,10 @@ npm i @chenziappu/ticker
 ```
 ```js
 import Ticker from '@chenziappu/ticker'
+```
+or
+```html
+<script src="https://unpkg.com/@chenziappu/ticker"></script>
 ```
 
 <br>
@@ -24,7 +28,7 @@ function raf({ fps, deltaTime, ratio, elapsedTime }) {
   // will be called on every frame
 }
 
-ticker.add(raf);
+const id = ticker.add(raf);
 ```
 
 <br>
@@ -45,6 +49,7 @@ ticker.add(raf);
 |`stop()`|Stop the animation loop.||
 |`add(callback, priority)`|Adds a callback that will be called on every frame and returns its ID.|`callback`: Callback to execute every frame.<br>`priority`: A higher number will be executed before those with lower number. Default is 0.|
 |`remove(id)`|Remove a callback by its ID.|`id`: A callback ID.|
+|`dispose()`|Dispose of the Resizer instance.||
 
 <br>
 
