@@ -1,6 +1,6 @@
 # @chenziappu/ticker
 
-Tickeris a simple animation loop.
+A simple animation loop.
 
 <br>
 
