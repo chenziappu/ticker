@@ -4,7 +4,7 @@ import { resolve } from 'path';
 export default defineConfig({
   build: {
     lib: {
-      entry: resolve(__dirname, 'src/Ticker.js'),
+      entry: resolve(__dirname, 'src/Ticker.ts'),
       name: 'Ticker',
       fileName: 'ticker'
     }

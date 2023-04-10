@@ -31,8 +31,7 @@
   "license": "ISC",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "build:type": "vite build && tsc",
+    "build": "vite build && tsc",
     "preview": "vite preview"
   },
   "devDependencies": {
