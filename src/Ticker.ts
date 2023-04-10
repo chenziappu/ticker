@@ -16,7 +16,7 @@ export default class Ticker {
   private callbacks: Array<{ id: number, callback: Callback, priority: number }>;
   private requestId: number;
   
-  constructor({ autoStart = true }: { autoStart?: boolean }) {
+  constructor({ autoStart = true }: { autoStart?: boolean } = {}) {
     this.id = Math.random();
 
     this.fps = 60;

@@ -1,6 +1,6 @@
 import Ticker from "@chenziappu/ticker";
 
-const ticker = new Ticker()
+const ticker = new Ticker();
 
 function raf({ fps, deltaTime, ratio, elapsedTime }) {
   console.log(fps);
