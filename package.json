@@ -9,13 +9,13 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/ticker.umd.cjs",
+  "main": "./dist/ticker.umd.js",
   "module": "./dist/ticker.mjs",
   "types": "./dist/Ticker.d.ts",
   "exports": {
     ".": {
       "import": "./dist/ticker.mjs",
-      "require": "./dist/ticker.umd.cjs"
+      "require": "./dist/ticker.umd.js"
     }
   },
   "keywords": [
