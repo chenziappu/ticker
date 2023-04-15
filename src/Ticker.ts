@@ -14,7 +14,7 @@ export default class Ticker {
   private lastTime: number;
   private ratio: number;
   private callbacks: Array<{ id: number, callback: Callback, priority: number }>;
-  private requestId!: number;
+  private requestId: number;
   
   constructor({ autoStart = true }: { autoStart?: boolean } = {}) {
     this.id = Math.random();
