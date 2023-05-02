@@ -83,16 +83,14 @@ export default class Ticker {
 
     this.lastTime = timestamp;
 
-    if (this.callbacks.length) {
-      this.callbacks.forEach(callback => {
-        callback.callback({
-          fps: this.fps,
-          deltaTime: this.deltaTime,
-          ratio: this.ratio,
-          elapsedTime: this.elapsedTime
-        });
+    this.callbacks.forEach(callback => {
+      callback.callback({
+        fps: this.fps,
+        deltaTime: this.deltaTime,
+        ratio: this.ratio,
+        elapsedTime: this.elapsedTime
       });
-    }
+    });
 
     this.requestId = requestAnimationFrame(this.tick.bind(this));
   }
