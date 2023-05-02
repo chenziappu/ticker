@@ -12,6 +12,6 @@
     "vite": "^4.2.0"
   },
   "dependencies": {
-    "@chenziappu/ticker": "^1.1.4"
+    "@chenziappu/ticker": "^1.1.5"
   }
 }
