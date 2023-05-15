@@ -1,4 +1,4 @@
-# @chenziappu/ticker
+# @roukara/ticker
 
 A simple animation loop.
 
@@ -7,14 +7,14 @@ A simple animation loop.
 ## Install
 
 ```sh
-npm i @chenziappu/ticker
+npm i @roukara/ticker
 ```
 ```js
-import Ticker from '@chenziappu/ticker'
+import Ticker from '@roukara/ticker'
 ```
 or
 ```html
-<script src="https://unpkg.com/@chenziappu/ticker"></script>
+<script src="https://unpkg.com/@roukara/ticker"></script>
 ```
 
 <br>
